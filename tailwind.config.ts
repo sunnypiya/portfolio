@@ -76,10 +76,11 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+        hero: 'url(/hero/hero-bg.png)',
+        hero_shape: 'url(/hero/shape-1.svg)',
+        hero_shape2_light: 'url(/hero/shape-2-light.svg)',
+        hero_shape2_dark: 'url(/hero/shape-2-dark.svg)',
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
