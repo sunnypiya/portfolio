@@ -15,8 +15,12 @@ import DevImg from "../components/DevImg";
 import Badge from "../components/Badge";
 import Socials from "../components/Socials";
 import Link from "next/link";
+import { IBasicInfoProps } from "@/lib/actions/shared.types";
 
-const Hero = () => {
+interface HeroCardProps {
+  basicInfo: IBasicInfoProps;
+}
+const Hero = (props: HeroCardProps) => {
   return (
     <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero  bg-no-repeat bg-bottom bg-cover dark:bg-none">
       <div className="container mx-auto">
@@ -26,10 +30,11 @@ const Hero = () => {
             <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
               Web App Developer
             </div>
-            <h1 className="h1">Hello, my name is SK Arya</h1>
+            <h1 className="h1">
+              Hello, my name is {props?.basicInfo?.fullName}
+            </h1>
             <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-              Brief decription with insights into myself, my vocational journey,
-              and what I engage in professionally.
+              {props?.basicInfo?.description}
             </p>
             {/* buttons */}
             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
