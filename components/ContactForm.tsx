@@ -4,12 +4,8 @@ import { Input } from "./ui/input";
 import { ArrowRightIcon, Mail, MessagesSquare, User } from "lucide-react";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
-import { addUpdateBasicInfo } from "@/lib/actions/user.action";
-import { IBasicInfo } from "@/database/basic_info.model";
-interface ContactFormProps {
-  mongouser: IBasicInfo;
-}
-const ContactForm = ({ mongouser }: ContactFormProps) => {
+
+const ContactForm = () => {
   return (
     <form>
       {/* Input */}

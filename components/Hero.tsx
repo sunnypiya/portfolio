@@ -18,7 +18,7 @@ import Link from "next/link";
 import { IBasicInfoProps } from "@/lib/actions/shared.types";
 
 interface HeroCardProps {
-  basicInfo: IBasicInfoProps;
+  basicInfo: IBasicInfoProps | null;
 }
 const Hero = (props: HeroCardProps) => {
   return (

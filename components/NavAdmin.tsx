@@ -7,7 +7,7 @@ import React from "react";
 const links = [
   { path: "/admin", name: "Dashboard" },
   { path: "/admin/projects", name: "my projects" },
-  // { path: "/admin/contact", name: "contact" },
+  { path: "/admin/contact", name: "contact" },
   { path: "/", name: "back to home" },
 ];
 const NavAdmin = ({ containerStyles, linkStyles, underlineStyles }: any) => {

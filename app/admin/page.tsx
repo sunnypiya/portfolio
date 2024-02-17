@@ -5,6 +5,8 @@ import { getBasicInfo, getUserInfo } from "@/lib/actions/user.action";
 import ContactForm from "@/components/ContactForm";
 import BasicInfoForm from "@/components/admin/BasicInfoForm";
 import { IBasicInfoProps } from "@/lib/actions/shared.types";
+import { MyDrawer } from "@/components/MyDrawer";
+import { Button } from "@/components/ui/button";
 
 const AdminHome = async () => {
   const { userId } = auth();
@@ -27,13 +29,17 @@ const AdminHome = async () => {
             <span className="w-[30px] h-[2px] bg-primary"></span>
             Welcom back 😊,
             <p className="font-bold">
-              {user?.firstName} - {mongoBasicInfo?.fullName}
+              {/* {user?.firstName} -  */}
+              {mongoBasicInfo?.fullName}
             </p>
           </div>
           <h1 className="h1 max-w-d mb-8">Manage you portfolio from here</h1>
           <p className="subtitle max-w-[400px]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
+          <Button>
+            <MyDrawer BasicInfoProps={mongoBasicInfo} />
+          </Button>
         </div>
         {/* Illustration */}
         <div className="hidden xl:flex w-full bg-admin_multitasking_light dark:bg-admin_multitasking_dark bg-contain bg-top bg-no-repeat"></div>
